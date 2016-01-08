@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS `firstaid_categories` (`id_firstaid_category` int(11) NOT NULL, `category_name` varchar(128) NOT NULL)
