@@ -1,0 +1,13 @@
+Table Users
+first_name,last_name,middle_name,user_name,
+email,password, phone, verified,record_commit_time
+
+devices_syncs_policies
+master_device_id, allowed_slave_devices,denied_slave_devices, unallocated_slave_devices, allowed_foreign_slave_devices,record_commit_time
+
+user_devices,
+user_id, device_name, device_model, first_seen, last_seen,record_commit_time
+
+
+server_access_logs,
+device_id, server_access_time, server_access_resource, device_ip_address,record_commit_time
