@@ -8,11 +8,29 @@ $firstaids = new Firstaids ( $action, $client );
 $columns = $records = array ();
 $all_firstaids = $firstaids->fetch_assoc_in_firstaids ( $columns, $records );
 
-printAllFirstAids ( $all_firstaids );
-function printAllFirstAids($all_firstaids) {
-	foreach ( $all_firstaids as $firstaid ) {
-		printFirstAid ( $firstaid );
+printAllFirstAids ($client, $all_firstaids );
+
+function printAllFirstAids($client,$all_firstaids) {
+	
+	if($client == POST_CLIENT_MOBILE_ANDROID){
+		for($i=0;$i< count($all_firstaids);$i++ ) {
+			printFirstAidJson ( $all_firstaids[$i] );
+			if($i< (count($all_firstaids) - 1 )){
+				echo ",";
+			}
+		}
+		
 	}
+	if($client == POST_CLIENT_DESKTOP){
+		foreach ( $all_firstaids as $firstaid ) {
+			printFirstAid ( $firstaid );
+		}
+	}
+	
+}
+
+function printFirstAidJson($all_firstaids){
+	echo json_encode(array_map("utf8_encode",$all_firstaids));
 }
 function printFirstAid($firstaid) {
 	echo '<div style="padding:10px;margin:10px;border:2px solid black;"><h3>' . $firstaid ["ailment"] . '</h3>';
