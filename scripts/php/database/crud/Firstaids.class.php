@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	* THIS SOURCE CODE WAS AUTOMATICALLY GENERATED ON Thu 06:13:23  07/01/2016
+	* THIS SOURCE CODE WAS AUTOMATICALLY GENERATED ON Mon 01:17:51  11/01/2016
 	* 
 	*
 	* DATABASE CRUD GENERATOR IS AN OPEN SOURCE PROJECT. TO IMPROVE ON THIS PROJECT BY
@@ -135,22 +135,22 @@ class Firstaids {
 	
 	
 	/**
-	* private class variable ailement_prevention
+	* private class variable ailment_prevention
 	*/
-	private $_ailement_prevention;
+	private $_ailment_prevention;
 	
 	/**
-	* returns the value of ailement_prevention
+	* returns the value of ailment_prevention
 	*/
-	public function _get_ailement_prevention() {
-		return $this->_ailement_prevention;
+	public function _get_ailment_prevention() {
+		return $this->_ailment_prevention;
 	}
 	
 	/**
-	* sets the value of ailement_prevention
+	* sets the value of ailment_prevention
 	*/
-	public function set_ailement_prevention($ailement_prevention) {
-		$this->_ailement_prevention = $ailement_prevention;
+	public function set_ailment_prevention($ailment_prevention) {
+		$this->_ailment_prevention = $ailment_prevention;
 	}
 	
 	
@@ -235,42 +235,42 @@ class Firstaids {
 	
 	
 	/**
-	* private class variable ailment_treatmeant
+	* private class variable ailment_treatment
 	*/
-	private $_ailment_treatmeant;
+	private $_ailment_treatment;
 	
 	/**
-	* returns the value of ailment_treatmeant
+	* returns the value of ailment_treatment
 	*/
-	public function _get_ailment_treatmeant() {
-		return $this->_ailment_treatmeant;
+	public function _get_ailment_treatment() {
+		return $this->_ailment_treatment;
 	}
 	
 	/**
-	* sets the value of ailment_treatmeant
+	* sets the value of ailment_treatment
 	*/
-	public function set_ailment_treatmeant($ailment_treatmeant) {
-		$this->_ailment_treatmeant = $ailment_treatmeant;
+	public function set_ailment_treatment($ailment_treatment) {
+		$this->_ailment_treatment = $ailment_treatment;
 	}
 	
 	
 	/**
-	* private class variable ailment_treatmeant_precautions
+	* private class variable ailment_treatment_precautions
 	*/
-	private $_ailment_treatmeant_precautions;
+	private $_ailment_treatment_precautions;
 	
 	/**
-	* returns the value of ailment_treatmeant_precautions
+	* returns the value of ailment_treatment_precautions
 	*/
-	public function _get_ailment_treatmeant_precautions() {
-		return $this->_ailment_treatmeant_precautions;
+	public function _get_ailment_treatment_precautions() {
+		return $this->_ailment_treatment_precautions;
 	}
 	
 	/**
-	* sets the value of ailment_treatmeant_precautions
+	* sets the value of ailment_treatment_precautions
 	*/
-	public function set_ailment_treatmeant_precautions($ailment_treatmeant_precautions) {
-		$this->_ailment_treatmeant_precautions = $ailment_treatmeant_precautions;
+	public function set_ailment_treatment_precautions($ailment_treatment_precautions) {
+		$this->_ailment_treatment_precautions = $ailment_treatment_precautions;
 	}
 	
 	
@@ -318,11 +318,11 @@ class Firstaids {
 		
 	/**
 	* Performs a database query and returns the value of id_firstaid 
-	* based on the value of $ailment,$ailment_information,$ailment_causes,$ailement_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatmeant,$ailment_treatmeant_precautions,$ailment_treatment_position,$ailment_short_notes passed to the function
+	* based on the value of $ailment,$ailment_information,$ailment_causes,$ailment_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatment,$ailment_treatment_precautions,$ailment_treatment_position,$ailment_short_notes passed to the function
 	*/
-	public function get_id_firstaid($ailment,$ailment_information,$ailment_causes,$ailement_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatmeant,$ailment_treatmeant_precautions,$ailment_treatment_position,$ailment_short_notes) {
-		$columns = array ('ailment','ailment_information','ailment_causes','ailement_prevention','ailment_signs','ailment_symptoms','ailment_cautions','ailment_medication','ailment_treatmeant','ailment_treatmeant_precautions','ailment_treatment_position','ailment_short_notes');
-		$records = array ($ailment,$ailment_information,$ailment_causes,$ailement_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatmeant,$ailment_treatmeant_precautions,$ailment_treatment_position,$ailment_short_notes);
+	public function get_id_firstaid($ailment,$ailment_information,$ailment_causes,$ailment_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatment,$ailment_treatment_precautions,$ailment_treatment_position,$ailment_short_notes) {
+		$columns = array ('ailment','ailment_information','ailment_causes','ailment_prevention','ailment_signs','ailment_symptoms','ailment_cautions','ailment_medication','ailment_treatment','ailment_treatment_precautions','ailment_treatment_position','ailment_short_notes');
+		$records = array ($ailment,$ailment_information,$ailment_causes,$ailment_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatment,$ailment_treatment_precautions,$ailment_treatment_position,$ailment_short_notes);
 		$id_firstaid_ = $this->query_from_TABLE_NAME ( $columns, $records );
 		return count($id_firstaid_)>0 ? $id_firstaid_ [0] ['id_firstaid'] : null;
 	}
@@ -365,14 +365,14 @@ class Firstaids {
 	
 	
 	/**
-	* Performs a database query and returns the value of ailement_prevention 
+	* Performs a database query and returns the value of ailment_prevention 
 	* based on the value of $id_firstaid passed to the function
 	*/
-	public function get_ailement_prevention($id_firstaid) {
+	public function get_ailment_prevention($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailement_prevention_ = $this->query_from_TABLE_NAME ( $columns, $records );
-		return count($ailement_prevention_)>0 ? $ailement_prevention_ [0] ['ailement_prevention'] : null;
+		$ailment_prevention_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		return count($ailment_prevention_)>0 ? $ailment_prevention_ [0] ['ailment_prevention'] : null;
 	}
 	
 	
@@ -425,26 +425,26 @@ class Firstaids {
 	
 	
 	/**
-	* Performs a database query and returns the value of ailment_treatmeant 
+	* Performs a database query and returns the value of ailment_treatment 
 	* based on the value of $id_firstaid passed to the function
 	*/
-	public function get_ailment_treatmeant($id_firstaid) {
+	public function get_ailment_treatment($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_treatmeant_ = $this->query_from_TABLE_NAME ( $columns, $records );
-		return count($ailment_treatmeant_)>0 ? $ailment_treatmeant_ [0] ['ailment_treatmeant'] : null;
+		$ailment_treatment_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		return count($ailment_treatment_)>0 ? $ailment_treatment_ [0] ['ailment_treatment'] : null;
 	}
 	
 	
 	/**
-	* Performs a database query and returns the value of ailment_treatmeant_precautions 
+	* Performs a database query and returns the value of ailment_treatment_precautions 
 	* based on the value of $id_firstaid passed to the function
 	*/
-	public function get_ailment_treatmeant_precautions($id_firstaid) {
+	public function get_ailment_treatment_precautions($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_treatmeant_precautions_ = $this->query_from_TABLE_NAME ( $columns, $records );
-		return count($ailment_treatmeant_precautions_)>0 ? $ailment_treatmeant_precautions_ [0] ['ailment_treatmeant_precautions'] : null;
+		$ailment_treatment_precautions_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		return count($ailment_treatment_precautions_)>0 ? $ailment_treatment_precautions_ [0] ['ailment_treatment_precautions'] : null;
 	}
 	
 	
