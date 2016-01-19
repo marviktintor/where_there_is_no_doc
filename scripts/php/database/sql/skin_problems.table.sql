@@ -1,0 +1,1 @@
+create table skin_problems ( id_skin_problem integer primary key auto_increment,skin_problem text not null, skin_problem_information text, treatment text , prevention text, skin_problem_caution text );
