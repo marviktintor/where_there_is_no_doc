@@ -1,0 +1,1 @@
+create table oldage_sickness ( id_sickness integer primary key auto_increment, sickness text not null, sickness_info text, sickness_causes text,sickness_signs text,  sickness_treatment text,  sickness_treatment_precautions text, sickness_prevention text, sickness_caution text, sickness_note text );
