@@ -1,0 +1,1 @@
+create table taking_care_of_sick( id_care_item integer primary key auto_increment, care_item text not null, sick_person_care text, very_sick_person_care text)
