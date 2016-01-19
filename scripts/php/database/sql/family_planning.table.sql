@@ -1,0 +1,1 @@
+create table family_planning (  id_family_planning_method integer primary key auto_increment,family_planning_method text not null, family_planning_method_information text , method_precautions text);
