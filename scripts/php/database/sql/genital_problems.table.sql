@@ -1,0 +1,1 @@
+create table genital_problems( id_genital_problem integer primary key auto_increment, genital_problem text not null, genital_problem_information text, genital_problem_problems text,genital_problem_signs text,  genital_problem_treatment text, genital_problem_prevention text, genital_problem_caution text  );
