@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	* THIS SOURCE CODE WAS AUTOMATICALLY GENERATED ON Mon 01:17:51  11/01/2016
+	* THIS SOURCE CODE WAS AUTOMATICALLY GENERATED ON Tue 10:05:18  19/01/2016
 	* 
 	*
 	* DATABASE CRUD GENERATOR IS AN OPEN SOURCE PROJECT. TO IMPROVE ON THIS PROJECT BY
@@ -323,7 +323,7 @@ class Firstaids {
 	public function get_id_firstaid($ailment,$ailment_information,$ailment_causes,$ailment_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatment,$ailment_treatment_precautions,$ailment_treatment_position,$ailment_short_notes) {
 		$columns = array ('ailment','ailment_information','ailment_causes','ailment_prevention','ailment_signs','ailment_symptoms','ailment_cautions','ailment_medication','ailment_treatment','ailment_treatment_precautions','ailment_treatment_position','ailment_short_notes');
 		$records = array ($ailment,$ailment_information,$ailment_causes,$ailment_prevention,$ailment_signs,$ailment_symptoms,$ailment_cautions,$ailment_medication,$ailment_treatment,$ailment_treatment_precautions,$ailment_treatment_position,$ailment_short_notes);
-		$id_firstaid_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$id_firstaid_ = $this->query_from_firstaids ( $columns, $records );
 		return count($id_firstaid_)>0 ? $id_firstaid_ [0] ['id_firstaid'] : null;
 	}
 	
@@ -335,7 +335,7 @@ class Firstaids {
 	public function get_ailment($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_)>0 ? $ailment_ [0] ['ailment'] : null;
 	}
 	
@@ -347,7 +347,7 @@ class Firstaids {
 	public function get_ailment_information($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_information_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_information_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_information_)>0 ? $ailment_information_ [0] ['ailment_information'] : null;
 	}
 	
@@ -359,7 +359,7 @@ class Firstaids {
 	public function get_ailment_causes($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_causes_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_causes_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_causes_)>0 ? $ailment_causes_ [0] ['ailment_causes'] : null;
 	}
 	
@@ -371,7 +371,7 @@ class Firstaids {
 	public function get_ailment_prevention($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_prevention_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_prevention_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_prevention_)>0 ? $ailment_prevention_ [0] ['ailment_prevention'] : null;
 	}
 	
@@ -383,7 +383,7 @@ class Firstaids {
 	public function get_ailment_signs($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_signs_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_signs_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_signs_)>0 ? $ailment_signs_ [0] ['ailment_signs'] : null;
 	}
 	
@@ -395,7 +395,7 @@ class Firstaids {
 	public function get_ailment_symptoms($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_symptoms_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_symptoms_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_symptoms_)>0 ? $ailment_symptoms_ [0] ['ailment_symptoms'] : null;
 	}
 	
@@ -407,7 +407,7 @@ class Firstaids {
 	public function get_ailment_cautions($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_cautions_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_cautions_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_cautions_)>0 ? $ailment_cautions_ [0] ['ailment_cautions'] : null;
 	}
 	
@@ -419,7 +419,7 @@ class Firstaids {
 	public function get_ailment_medication($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_medication_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_medication_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_medication_)>0 ? $ailment_medication_ [0] ['ailment_medication'] : null;
 	}
 	
@@ -431,7 +431,7 @@ class Firstaids {
 	public function get_ailment_treatment($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_treatment_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_treatment_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_treatment_)>0 ? $ailment_treatment_ [0] ['ailment_treatment'] : null;
 	}
 	
@@ -443,7 +443,7 @@ class Firstaids {
 	public function get_ailment_treatment_precautions($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_treatment_precautions_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_treatment_precautions_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_treatment_precautions_)>0 ? $ailment_treatment_precautions_ [0] ['ailment_treatment_precautions'] : null;
 	}
 	
@@ -455,7 +455,7 @@ class Firstaids {
 	public function get_ailment_treatment_position($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_treatment_position_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_treatment_position_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_treatment_position_)>0 ? $ailment_treatment_position_ [0] ['ailment_treatment_position'] : null;
 	}
 	
@@ -467,7 +467,7 @@ class Firstaids {
 	public function get_ailment_short_notes($id_firstaid) {
 		$columns = array ('id_firstaid');
 		$records = array ($id_firstaid);
-		$ailment_short_notes_ = $this->query_from_TABLE_NAME ( $columns, $records );
+		$ailment_short_notes_ = $this->query_from_firstaids ( $columns, $records );
 		return count($ailment_short_notes_)>0 ? $ailment_short_notes_ [0] ['ailment_short_notes'] : null;
 	}
 	

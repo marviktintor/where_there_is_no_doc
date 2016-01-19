@@ -1,0 +1,1 @@
+create table examining_sick_person ( id_examination integer primary key auto_increment, examination_title text not null,examination_description text not null);

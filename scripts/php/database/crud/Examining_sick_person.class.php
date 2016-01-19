@@ -17,7 +17,7 @@
 	*/
 
 	
-class Firstaid_categories {
+class Examining_sick_person {
 
 	private $databaseUtils;
 	private $action;
@@ -75,48 +75,80 @@ class Firstaid_categories {
 	
 		
 	/**
-	* private class variable category_name
+	* private class variable examination_title
 	*/
-	private $_category_name;
+	private $_examination_title;
 	
 	/**
-	* returns the value of category_name
+	* returns the value of examination_title
 	*/
-	public function _get_category_name() {
-		return $this->_category_name;
+	public function _get_examination_title() {
+		return $this->_examination_title;
 	}
 	
 	/**
-	* sets the value of category_name
+	* sets the value of examination_title
 	*/
-	public function set_category_name($category_name) {
-		$this->_category_name = $category_name;
+	public function set_examination_title($examination_title) {
+		$this->_examination_title = $examination_title;
+	}
+	
+	
+	/**
+	* private class variable examination_description
+	*/
+	private $_examination_description;
+	
+	/**
+	* returns the value of examination_description
+	*/
+	public function _get_examination_description() {
+		return $this->_examination_description;
+	}
+	
+	/**
+	* sets the value of examination_description
+	*/
+	public function set_examination_description($examination_description) {
+		$this->_examination_description = $examination_description;
 	}
 	
 
 		
 		
 	/**
-	* Performs a database query and returns the value of id_firstaid_category 
-	* based on the value of $category_name passed to the function
+	* Performs a database query and returns the value of id_examination 
+	* based on the value of $examination_title,$examination_description passed to the function
 	*/
-	public function get_id_firstaid_category($category_name) {
-		$columns = array ('category_name');
-		$records = array ($category_name);
-		$id_firstaid_category_ = $this->query_from_firstaid_categories ( $columns, $records );
-		return count($id_firstaid_category_)>0 ? $id_firstaid_category_ [0] ['id_firstaid_category'] : null;
+	public function get_id_examination($examination_title,$examination_description) {
+		$columns = array ('examination_title','examination_description');
+		$records = array ($examination_title,$examination_description);
+		$id_examination_ = $this->query_from_examining_sick_person ( $columns, $records );
+		return count($id_examination_)>0 ? $id_examination_ [0] ['id_examination'] : null;
 	}
 	
 	
 	/**
-	* Performs a database query and returns the value of category_name 
-	* based on the value of $id_firstaid_category passed to the function
+	* Performs a database query and returns the value of examination_title 
+	* based on the value of $id_examination passed to the function
 	*/
-	public function get_category_name($id_firstaid_category) {
-		$columns = array ('id_firstaid_category');
-		$records = array ($id_firstaid_category);
-		$category_name_ = $this->query_from_firstaid_categories ( $columns, $records );
-		return count($category_name_)>0 ? $category_name_ [0] ['category_name'] : null;
+	public function get_examination_title($id_examination) {
+		$columns = array ('id_examination');
+		$records = array ($id_examination);
+		$examination_title_ = $this->query_from_examining_sick_person ( $columns, $records );
+		return count($examination_title_)>0 ? $examination_title_ [0] ['examination_title'] : null;
+	}
+	
+	
+	/**
+	* Performs a database query and returns the value of examination_description 
+	* based on the value of $id_examination passed to the function
+	*/
+	public function get_examination_description($id_examination) {
+		$columns = array ('id_examination');
+		$records = array ($id_examination);
+		$examination_description_ = $this->query_from_examining_sick_person ( $columns, $records );
+		return count($examination_description_)>0 ? $examination_description_ [0] ['examination_description'] : null;
 	}
 	
 
@@ -124,10 +156,10 @@ class Firstaid_categories {
 	/**
 	* Returns the table name. This is the owner of these crud functions.
 	* The various crud functions directly affect this table
-	* @return Table Name [firstaid_categories] 
+	* @return Table Name [examining_sick_person] 
 	*/
 	public static function get_table() {
-		return 'firstaid_categories';
+		return 'examining_sick_person';
 	}
 	
 	/**
@@ -149,65 +181,65 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* Used  to calculate the number of times a record exists in the table [firstaid_categories]
+	* Used  to calculate the number of times a record exists in the table [examining_sick_person]
 	*
-	* @return the number of times a record exists exists in the table [firstaid_categories]
+	* @return the number of times a record exists exists in the table [examining_sick_person]
 	*/
 	public function is_exists(Array $columns, Array $records, $printSQL = false) {
 		return $this->get_database_utils ()->is_exists ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
 	/**
-	* Inserts data into the table[firstaid_categories]
+	* Inserts data into the table[examining_sick_person]
 	*
 	* @return 1 if data was inserted,0 otherwise
 	*/
-	public function insert_records_to_firstaid_categories(Array $columns, Array $records, $printSQL = false) {
+	public function insert_records_to_examining_sick_person(Array $columns, Array $records, $printSQL = false) {
 		return $this->insert_records ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
 	/**
-	* Deletes all the records that meets the passed criteria from the table [firstaid_categories]
+	* Deletes all the records that meets the passed criteria from the table [examining_sick_person]
 	*  
 	* @return number of deleted rows
 	*/
-	public function delete_record_from_firstaid_categories(Array $columns, Array $records, $printSQL = false) {
+	public function delete_record_from_examining_sick_person(Array $columns, Array $records, $printSQL = false) {
 		return $this->delete_record ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
 	/**
-	* updates all the records that meets the passed criteria from the table [firstaid_categories]
+	* updates all the records that meets the passed criteria from the table [examining_sick_person]
 	*  
 	* @return number of updated rows
 	*/
-	public function update_record_in_firstaid_categories(Array $columns, Array $records, Array $where_columns, Array $where_records, $printSQL = false) {
+	public function update_record_in_examining_sick_person(Array $columns, Array $records, Array $where_columns, Array $where_records, $printSQL = false) {
 		return $this->update_record ( $this->get_table (), $columns, $records, $where_columns, $where_records, $printSQL );
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
-	public function fetch_assoc_in_firstaid_categories(Array $columns, Array $records, $printSQL = false) {
+	public function fetch_assoc_in_examining_sick_person(Array $columns, Array $records, $printSQL = false) {
 		return $this->fetch_assoc ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
-	public function query_from_firstaid_categories(Array $columns, Array $records, $printSQL = false) {
+	public function query_from_examining_sick_person(Array $columns, Array $records, $printSQL = false) {
 		return $this->query ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
-	public function search_in_firstaid_categories(Array $columns, Array $records, $printSQL = false) {
+	public function search_in_examining_sick_person(Array $columns, Array $records, $printSQL = false) {
 		return $this->search ( $this->get_table (), $columns, $records, $printSQL );
 	}
 	
@@ -221,7 +253,7 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* Deletes all the records that meets the passed criteria from the table [firstaid_categories]
+	* Deletes all the records that meets the passed criteria from the table [examining_sick_person]
 	*  
 	* @return number of deleted rows
 	*/
@@ -231,7 +263,7 @@ class Firstaid_categories {
 	
 	
 	/**
-	* Inserts data into the table[firstaid_categories]
+	* Inserts data into the table[examining_sick_person]
 	*
 	* @return 1 if data was inserted,0 otherwise
 	*/
@@ -240,7 +272,7 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* updates all the records that meets the passed criteria from the table [firstaid_categories]
+	* updates all the records that meets the passed criteria from the table [examining_sick_person]
 	*  
 	* @return number of updated rows
 	*/
@@ -249,7 +281,7 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
@@ -258,7 +290,7 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
@@ -267,7 +299,7 @@ class Firstaid_categories {
 	}
 	
 	/**
-	* Gets an Associative array of the records in the table [firstaid_categories] that meets the passed criteria
+	* Gets an Associative array of the records in the table [examining_sick_person] that meets the passed criteria
 	*  
 	* @return associative array of the records that are found after performing the query
 	*/
