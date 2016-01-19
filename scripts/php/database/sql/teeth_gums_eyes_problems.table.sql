@@ -1,0 +1,1 @@
+create table teeth_gums_eyes_problems ( id_problem integer primary key auto_increment, problem text not null, problem_information text ,  problem_treatment text ,  problem_prevention text , problem_caution text  );
