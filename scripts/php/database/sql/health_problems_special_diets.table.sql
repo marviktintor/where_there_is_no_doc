@@ -1,0 +1,1 @@
+create table health_problems_special_diets( id_health_problem integer primary  key auto_increment, health_problem text not null, health_problem_information not null, health_problem_signs text , health_problem_signs_advanced text , health_problem_treatment text , health_problem_prevention text ,  health_problem_caution text , health_problem_note text, special_diet text not null );
